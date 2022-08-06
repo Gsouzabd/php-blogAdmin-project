@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <script src="../js/index.js" defer></script>
+
+  <link rel="preconncet" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/f2ea1c16e3.js" crossorigin="anonymous"></script>
+
+  <title>Login</title>
+</head>
+<body>
+<header>
+  <h1>Login</h1>
+</header>
+<main>
+  <form action="/realizar-login" method="post">
+    <h1>Login</h1>
+    <section class="inputs-container">
+      <input type="email" id="email" name="email" required="required" placeholder="example@gmail.com" >
+
+      <div class="password-container">
+        <input type="password" name="senha" id="senha" class="field-password" placeholder="Digite sua senha">
+        <i class="fa-solid fa-eye" id="eye" onclick="showPassword()"></i>
+        <i class="fa-solid fa-eye-slash" id="eye-slash" onclick="showPassword()"></i>
+      </div>
+    </section>
+
+    <section class="password-infos">
+      <div>
+        <input type="checkbox">
+        <span class="remembergi">Lembrar senha?</span>
+      </div>
+
+      <a href="#">Esqueceu sua senha?</a>
+    </section>
+
+    <button id="btn-login">Login</button>
+
+    <section class="links-container">
+      <span>Ou entre com:</span>
+
+      <aside>
+        <a href="#"><i class="fa-brands fa-google-plus-g google"></i></a>
+        <a href="#"><i class="fa-brands fa-linkedin linkedin"></i></a>
+        <a href="#"><i class="fa-brands fa-square-facebook facebook"></i></a>
+      </aside>
+    </section>
+
+    <footer>
+      <hr>
+      <span>Ainda não tem uma conta? <a href="cadastro.html">Cadastre-se</a> </span>
+    </footer>
+  </form>
+</main>
+</body>
+</html>

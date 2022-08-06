@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <script src="../js/index.js" defer></script>
+
+    <link rel="preconncet" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/f2ea1c16e3.js" crossorigin="anonymous"></script>
+    <title>Cadastre sua conta</title>
+</head>
+<body>
+    <div id="cadastro">
+        <div class="teste">
+            <h1>Cadastro</h1> 
+            <form class="register" method="post" action="/cadastrar-usuario">
+
+            
+            <p class="email"> 
+                <label for="email_cad">Seu e-mail</label>
+                <input id="email_cad" name="email_cad" required="required" type="email" placeholder="example@gmail.com"/>
+            </p>
+            
+            <p class="senha"> 
+                <label for="senha_cad">Sua senha</label>
+                <input id="senha_cad" name="senha_cad" required="required" type="password" placeholder="ex. 1234"/>
+            </p>
+            
+            <button class="btn-register"> Cadastrar</button>
+        
+            <p class="link">  
+                Já tem conta?
+                <a href="login.html"> Ir para Login </a>
+            </p>
+            
+            </form>
+        </div>
+    </div>
+</body>
+</html>
