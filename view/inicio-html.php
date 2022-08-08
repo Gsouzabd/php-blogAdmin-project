@@ -1,7 +1,7 @@
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
-    <title>Document</title>
+    <title>Menu Principal</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 </head>
 <body>
@@ -18,7 +18,7 @@
 <?php endif; ?>
 <div class="container">
     <div class="jumbotron">
-        <h1><?php echo $titulo ?></h1>
+        <h1 class="inicio-title"><?php echo $titulo ?></h1>
     </div>
 
     <style>
