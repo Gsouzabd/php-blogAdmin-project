@@ -332,3 +332,8 @@ a {
 h1.inicio-title {
     text-align: center !important;
 }
+
+h1.inicio-title {
+    display: flex;
+    justify-content: center;
+}
