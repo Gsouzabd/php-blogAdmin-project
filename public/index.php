@@ -13,12 +13,20 @@ $path = $_SERVER['PATH_INFO'];
 
 
 if(!array_key_exists($path, $routes)){
-    echo "ERRO 404";
+    http_response_code(404);
     exit();
 }
-else {
+
+    session_start();
+
+
+    if (!isset($_SESSION['logado']) && $path !== '/login' && $path !== '/realizar-login')
+    {
+        header('location: /login');
+    }
+
     $classeControladora = $routes[$path];
     /** @var InterfaceControladorRequisicao $controlador */
     $controlador = new $classeControladora;
     $controlador->processaRequisicao();
-}
+

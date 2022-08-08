@@ -1,24 +1,34 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="styles.css">
   <script src="../js/index.js" defer></script>
 
+
   <link rel="preconncet" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
   <script src="https://kit.fontawesome.com/f2ea1c16e3.js" crossorigin="anonymous"></script>
-
   <title>Login</title>
 </head>
 <body>
-<header>
-  <h1>Login</h1>
-</header>
+
 <main>
   <form action="/realizar-login" method="post">
+
+      <?php if(isset($_SESSION['mensagem'])):?>
+          <div class="alert alert-<?= $_SESSION['tipo_mensagem'];?>">
+              <?= $_SESSION['mensagem'];?>
+          </div>
+      <?php endif;?>
+
+      <?php
+      unset ($_SESSION['tipo_mensagem']);
+      unset ($_SESSION['mensagem']);?>
+
     <h1>Login</h1>
     <section class="inputs-container">
       <input type="email" id="email" name="email" required="required" placeholder="example@gmail.com" >

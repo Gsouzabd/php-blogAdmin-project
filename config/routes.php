@@ -8,14 +8,17 @@ use Alura\Cursos\Controller\EditarCursoSalvar;
 use Alura\Cursos\Controller\ExcluirCurso;
 use Alura\Cursos\Controller\ListarCursos;
 use Alura\Cursos\Controller\Login;
+use Alura\Cursos\Controller\Logout;
 use Alura\Cursos\Controller\RealizarLogin;
 use Alura\Cursos\Controller\SalvarCurso;
 
 $routes = [
+    '/login' => Login::class,
+    '' => Login::class,
+    '/logout' => Logout::class,
     '/listar-cursos' => ListarCursos::class,
     '/adicionar-curso' => AdicionarCurso::class,
     '/salvar-curso' => SalvarCurso::class,
-    '/login' => Login::class,
     '/excluir-curso' => ExcluirCurso::class,
     '/editar-curso-salvar' => EditarCursoSalvar::class,
     '/editar-curso' => EditarCurso::class,

@@ -3,7 +3,16 @@ include __DIR__ . '/../../view/inicio-html.php';
 
 ?>
 <!DOCTYPE html>
-        <html lang="pt-BR">
+    <html lang="pt-BR">
+                <?php if(isset($_SESSION['mensagem'])):?>
+                    <div class="alert alert-<?= $_SESSION['tipo_mensagem'];?>">
+                        <?= $_SESSION['mensagem'];?>
+                    </div>
+                <?php endif;?>
+
+                <?php
+                unset ($_SESSION['tipo_mensagem']);
+                unset ($_SESSION['mensagem']);?>
 
             <a href="/adicionar-curso" class="btn btn-primary mb-2">Adicionar Novo</a>
             <ul class="list-group">

@@ -13,16 +13,16 @@ class RealizarLogin implements InterfaceControladorRequisicao
     {
         $entityManager = (new EntityManagerCreator())->getEntityManager();
         $this->repositorioUsuarios = $entityManager->getRepository(Usuario::class);
-
     }
 
     public function processaRequisicao(): void
     {
         $email = filter_input(INPUT_POST, 'email', FILTER_VALIDATE_EMAIL);
         if (is_null($email) || $email === false){
-            echo "E-mail Incorreto!";
+            $_SESSION['tipo_mensagem'] = 'danger';
+            $_SESSION['mensagem'] = 'E-mail inválido!';
+            header('location: /login');
         }
-
         $senha = filter_input(INPUT_POST, 'senha', FILTER_SANITIZE_STRING);
 
         /** @var Usuario $usuario */
@@ -30,16 +30,14 @@ class RealizarLogin implements InterfaceControladorRequisicao
 
         if(is_null($usuario) || !$usuario->senhaEstaCorreta($senha))
         {
-            echo "E-mail ou senha inválido";
+            $_SESSION['tipo_mensagem'] = 'danger';
+            $_SESSION['mensagem'] = 'E-mail ou senha incorreta!';
+            header('location: /login');
             return;
         }
 
-        session_start();
         $_SESSION['logado'] = true;
-
-
          header('location: /listar-cursos');
-
 
     }
 }

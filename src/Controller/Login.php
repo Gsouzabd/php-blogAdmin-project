@@ -8,7 +8,7 @@ class Login implements InterfaceControladorRequisicao
     public function processaRequisicao(): void
     {
 
-        require __DIR__ . '/../../public/login.html';
+        require __DIR__ . '/../../public/login.php';
 
     }
 }

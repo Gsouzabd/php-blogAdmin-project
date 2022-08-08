@@ -27,6 +27,8 @@ class EditarCursoSalvar implements InterfaceControladorRequisicao
         $curso->setDescricao($descricao);
         $this->entityManager->merge($curso);
         $this->entityManager->flush($curso);
+        $_SESSION['tipo_mensagem'] = 'success';
+        $_SESSION['mensagem'] = "  Curso editado com sucesso!  $descricao ";
         header("location: /listar-cursos");
 
 
