@@ -51,18 +51,7 @@
 
     <button id="btn-login">Login</button>
 
-    <section class="links-container">
-      <span>Ou entre com:</span>
-
-      <aside>
-        <a href="#"><i class="fa-brands fa-google-plus-g google"></i></a>
-        <a href="#"><i class="fa-brands fa-linkedin linkedin"></i></a>
-        <a href="#"><i class="fa-brands fa-square-facebook facebook"></i></a>
-      </aside>
-    </section>
-
     <footer>
-      <hr>
       <span>Ainda não tem uma conta? <a href="cadastro.html">Cadastre-se</a> </span>
     </footer>
   </form>
