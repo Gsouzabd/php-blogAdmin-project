@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="styles.css">
-  <script src="../js/index.js" defer></script>
+  <script src="index.js" defer></script>
 
 
   <link rel="preconncet" href="https://fonts.gstatic.com">
@@ -34,7 +34,7 @@
       <input type="email" id="email" name="email" required="required" placeholder="example@gmail.com" >
 
       <div class="password-container">
-        <input type="password" name="senha" id="senha" class="field-password" placeholder="Digite sua senha">
+        <input type="password" name="senha" id="field-password" class="field-password" placeholder="Digite sua senha">
         <i class="fa-solid fa-eye" id="eye" onclick="showPassword()"></i>
         <i class="fa-solid fa-eye-slash" id="eye-slash" onclick="showPassword()"></i>
       </div>
