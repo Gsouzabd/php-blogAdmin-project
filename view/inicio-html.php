@@ -22,9 +22,9 @@
         <h1 class="inicio-title"><?php echo $titulo ?></h1>
     </div>
 
-    <style>
+    <!-- <style>
         .mr-auto, .mx-auto {
             margin-right: initial !important;
             bottom: 5;
         }
-    </style>
+    </style> -->
