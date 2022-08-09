@@ -4,19 +4,23 @@ namespace Alura\Cursos\Controller;
 
 use Alura\Cursos\Entity\Usuario;
 use Alura\Cursos\Infra\EntityManagerCreator;
+use Doctrine\ORM\EntityManagerInterface;
 
 class CadastrarUsuario implements InterfaceControladorRequisicao
 {
 
 
     /**
-     * @var \Doctrine\ORM\EntityManagerInterface
+     * @var EntityManagerInterface
      */
     private $entityManager;
+
+    private $repositorioUsuario;
 
     public function __construct()
     {
         $this->entityManager = (new EntityManagerCreator())->getEntityManager();
+        $this->repositorioUsuario = $this->entityManager->getRepository(Usuario::class);
 
     }
 
@@ -28,8 +32,15 @@ class CadastrarUsuario implements InterfaceControladorRequisicao
         $senha = filter_input(INPUT_POST, 'senha_cad', FILTER_SANITIZE_STRING);
         $hashed_senha = password_hash($senha, PASSWORD_DEFAULT);
 
-        if (is_null($email) || $email === false || is_null($senha)){
-            echo "E-mail ou senha incorreto!";
+
+        $check_email = $this->repositorioUsuario->findOneBy(['email' => $email]);
+
+
+        if (!is_null($check_email)){
+            $_SESSION['tipo_mensagem'] = 'danger';
+            $_SESSION['mensagem'] = 'E-mail já existente';
+            header('location: /cadastro');
+            return;
         }
 
         $usuario->setEmail($email);
@@ -42,5 +53,6 @@ class CadastrarUsuario implements InterfaceControladorRequisicao
 
 
         header('location: /listar-cursos');
+
     }
 }

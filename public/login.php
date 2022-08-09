@@ -27,7 +27,8 @@
 
       <?php
       unset ($_SESSION['tipo_mensagem']);
-      unset ($_SESSION['mensagem']);?>
+      unset ($_SESSION['mensagem']);
+      ?>
 
     <h1>Login</h1>
     <section class="inputs-container">
@@ -46,13 +47,14 @@
         <span class="remembergi">Lembrar senha?</span>
       </div>
 
-      <a href="#">Esqueceu sua senha?</a>
+      <a href="/esqueceu-senha">Esqueceu sua senha?</a>
     </section>
 
     <button id="btn-login">Login</button>
 
     <footer>
-      <span>Ainda não tem uma conta? <a href="cadastro.html">Cadastre-se</a> </span>
+      <span>Ainda não tem uma conta? <a href="/cadastro">Cadastre-se</a> </span>
+
     </footer>
   </form>
 </main>

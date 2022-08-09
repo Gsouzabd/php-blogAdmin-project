@@ -21,7 +21,10 @@ class RealizarLogin implements InterfaceControladorRequisicao
         if (is_null($email) || $email === false){
             $_SESSION['tipo_mensagem'] = 'danger';
             $_SESSION['mensagem'] = 'E-mail inválido!';
+
             header('location: /login');
+            return;
+
         }
         $senha = filter_input(INPUT_POST, 'senha', FILTER_SANITIZE_STRING);
 
@@ -32,7 +35,9 @@ class RealizarLogin implements InterfaceControladorRequisicao
         {
             $_SESSION['tipo_mensagem'] = 'danger';
             $_SESSION['mensagem'] = 'E-mail ou senha incorreta!';
+
             header('location: /login');
+
             return;
         }
 

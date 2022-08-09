@@ -20,10 +20,12 @@ if(!array_key_exists($path, $routes)){
     session_start();
 
 
-    if (!isset($_SESSION['logado']) && $path !== '/login' && $path !== '/realizar-login')
+    if (!isset($_SESSION['logado']) && $path !== '/login' && $path !== '/realizar-login' && $path!=='/cadastro' && $path !== '/esqueceu-senha')
     {
         header('location: /login');
     }
+
+
 
     $classeControladora = $routes[$path];
     /** @var InterfaceControladorRequisicao $controlador */
