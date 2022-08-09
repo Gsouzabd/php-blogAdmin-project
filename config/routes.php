@@ -11,6 +11,7 @@ use Alura\Cursos\Controller\ListarCursos;
 use Alura\Cursos\Controller\Login;
 use Alura\Cursos\Controller\Logout;
 use Alura\Cursos\Controller\RealizarLogin;
+use Alura\Cursos\Controller\redefinirSenha;
 use Alura\Cursos\Controller\SalvarCurso;
 
 $routes = [
@@ -26,7 +27,8 @@ $routes = [
     '/realizar-login' => RealizarLogin::class,
     '/cadastro' => Cadastro::class,
     '/cadastrar-usuario' => CadastrarUsuario::class,
-    '/esqueceu-senha' => EsqueceuSenha::class
+    '/esqueceu-senha' => EsqueceuSenha::class,
+    '/redefinir-senha' => redefinirSenha::class
     ];
 
 return $routes;

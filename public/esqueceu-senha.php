@@ -32,7 +32,7 @@
         ?>
 
 
-        <form class="register" method="post" action="/cadastrar-usuario">
+        <form class="register" method="post" action="/redefinir-senha">
 
 
             <p class="email">
